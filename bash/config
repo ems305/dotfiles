@@ -1,0 +1,8 @@
+# Configuration
+# ===========================================================================
+
+# Prompt (requires vcprompt: http://vc.gerg.ca/hg/vcprompt/)
+PS1='∫ \W$(vcprompt -f " (%n:%b)") '
+
+# Readline Settings
+bind "set completion-ignore-case on"

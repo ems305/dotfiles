@@ -1,0 +1,35 @@
+# Aliases
+# ===========================================================================
+
+# Changing Directories
+alias ..='cd ..'
+alias cdd='cd -'
+
+# Nice file listings
+alias ls='ls -lh'
+alias la='ls -la'
+
+# Commonly accessed directories
+alias dev='cd /Volumes/Active-Projects/Developer-Environments/Taylor-Smith/'
+alias web='cd /Volumes/Active-Projects/Websites/'
+alias db='cd ~/Dropbox'
+
+# Apache
+alias hosts='mate /private/etc/hosts'
+alias restart='sudo /usr/sbin/apachectl restart'
+
+
+
+# Functions
+# ===========================================================================
+
+# Make a new directory and browse to it
+mcd () {
+  mkdir "$@" && cd "$@"
+}
+
+# Fixes caching issues you may run into in Umbraco
+flush() {
+  touch web.config
+  rm App_Data/umbraco.config
+}
