@@ -18,7 +18,10 @@ alias db='cd ~/Dropbox'
 alias hosts='mate /private/etc/hosts'
 alias restart='sudo /usr/sbin/apachectl restart'
 
-
+# Web Browsers
+alias c='open -a /Applications/Google\ Chrome.app'
+alias f='open -a /Applications/Firefox.app'
+alias s='open -a /Applications/Safari.app'
 
 # Functions
 # ===========================================================================
