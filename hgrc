@@ -1,3 +1,53 @@
 [ui]
 username = Taylor Smith <taylor.smith@imulus.com>
 verbose = false
+ignore = ~/.dotfiles/hg/hgignore
+merge = kdiff3
+
+[merge-tools]
+kdiff3.executable = /Applications/kdiff3
+kdiff3.premerge = True
+kdiff3.binary = False
+
+[extensions]
+prompt = ~/.dotfiles/hg/extensions/hg-prompt.py
+hgext.extdiff =
+hgext.graphlog =
+progress =
+color =
+gestalt=~/.dotfiles/hg/extensions/kiln_extensions/gestalt.py
+kilnauth=~/.dotfiles/hg/extensions/kiln_extensions/kilnauth.py
+kilnpath=~/.dotfiles/hg/extensions/kiln_extensions/kilnpath.py
+big-push=~/.dotfiles/hg/extensions/kiln_extensions/big-push.py
+kiln=~/.dotfiles/hg/extensions/kiln_extensions/kiln.py
+caseguard=~/.dotfiles/hg/extensions/kiln_extensions/caseguard.py
+kbfiles=~/.dotfiles/hg/extensions/kiln_extensions/bfiles/kbfiles
+
+[auth]
+kiln.prefix=imulus.kilnhg.com
+kiln.username=taylor.smith@imulus.com
+
+[kiln_scheme]
+kiln=http://imulus.fogbugz.com/Kiln/Repo
+
+
+[color]
+status.modified = magenta
+status.added = green
+status.removed = red
+status.deleted = cyan
+status.unknown = blue
+status.ignored = black
+
+[web]
+cacerts = /etc/hg-dummy-cert.pem
+
+[extdiff]
+cmd.opendiff = fmdiff
+
+[alias]
+slog = log --style=/Users/taylor/.dotfiles/hg/templates/map-cmdline.slog
+nlog = log --style=/Users/taylor/.dotfiles/hg/templates/map-cmdline.nlog
+sglog = log --style=/Users/taylor/.dotfiles/hg/templates/map-cmdline.sglog
+dlog = log --style=/Users/taylor/.dotfiles/hg/templates/map-cmdline.dlog
+

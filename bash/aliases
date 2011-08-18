@@ -10,12 +10,11 @@ alias ls='ls -lh'
 alias la='ls -la'
 
 # Commonly accessed directories
-alias dev='cd /Volumes/Active-Projects/Developer-Environments/Taylor-Smith/'
-alias web='cd /Volumes/Active-Projects/Websites/'
 alias db='cd ~/Dropbox'
 
 # Apache
 alias hosts='mate /private/etc/hosts'
+alias virtualhosts='mate /private/etc/apache2/virtualhosts'
 alias restart='sudo /usr/sbin/apachectl restart'
 
 # Web Browsers
@@ -23,16 +22,66 @@ alias c='open -a /Applications/Google\ Chrome.app'
 alias f='open -a /Applications/Firefox.app'
 alias s='open -a /Applications/Safari.app'
 
+# Override defaults
+alias grep='grep --color'
+
+
 # Functions
 # ===========================================================================
+
+# Connect to the development server
+dev1 () {
+  if [ ! -d "/Volumes/Active-Projects/Developer-Environments/Taylor-Smith/" ]; then
+    echo "Connecting ..."
+    osascript -e "try" -e "mount volume \"smb://taylor.smith@192.168.5.21/Active-Projects\"" -e "end try"
+  fi
+}
+
+# Browse to dev folder, connect if necessary
+dev () {
+  dev1
+  cd '/Volumes/Active-Projects/Developer-Environments/Taylor-Smith/'
+}
+
+# Browse to websites folder, connect if necessary
+web () {
+  dev1
+  cd '/Volumes/Active-Projects/Websites/'
+}
 
 # Make a new directory and browse to it
 mcd () {
   mkdir "$@" && cd "$@"
 }
 
+# Make a new directoy and delete it. For the luls.
+mrm () {
+  mkdir "$@" && rm -r "$@"
+}
+
 # Fixes caching issues you may run into in Umbraco
-flush() {
+flush () {
   touch web.config
   rm App_Data/umbraco.config
+}
+
+show_colors () {
+  echo -e $COLOR_NC"COLOR_NC"
+  echo -e $COLOR_WHITE"COLOR_WHITE"
+  echo -e $COLOR_BLACK"COLOR_BLACK"
+  echo -e $COLOR_BLUE"COLOR_BLUE"
+  echo -e $COLOR_LIGHT_BLUE"COLOR_LIGHT_BLUE"
+  echo -e $COLOR_GREEN"COLOR_GREEN"
+  echo -e $COLOR_LIGHT_GREEN"COLOR_LIGHT_GREEN"
+  echo -e $COLOR_CYAN"COLOR_CYAN"
+  echo -e $COLOR_LIGHT_CYAN"COLOR_LIGHT_CYAN"
+  echo -e $COLOR_RED"COLOR_RED"
+  echo -e $COLOR_LIGHT_RED"COLOR_LIGHT_RED"
+  echo -e $COLOR_PURPLE"COLOR_PURPLE"
+  echo -e $COLOR_LIGHT_PURPLE"COLOR_LIGHT_PURPLE"
+  echo -e $COLOR_YELLOW"COLOR_YELLOW"
+  echo -e $COLOR_LIGHT_YELLOW"COLOR_LIGHT_YELLOW"
+  echo -e $COLOR_GRAY"COLOR_GRAY"
+  echo -e $COLOR_LIGHT_GRAY"COLOR_LIGHT_GRAY"
+  echo -e $COLOR_NC
 }

@@ -1,0 +1,18 @@
+# use glob syntax
+syntax: glob
+
+# Umbraco files
+wwwroot/App_Data/TEMP
+wwwroot/App_Data/umbraco.config
+wwwroot/media
+
+# Regular Files
+wwwroot/web.config
+.DS_Store
+
+#other version control directories
+.svn
+.git
+.gitignore
+
+.sass-cache
