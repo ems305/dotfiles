@@ -26,6 +26,9 @@ alias s='open -a /Applications/Safari.app'
 alias grep='grep --color'
 
 
+alias cwd='pwd | pbcopy'
+
+
 # Functions
 # ===========================================================================
 
@@ -84,4 +87,32 @@ show_colors () {
   echo -e $COLOR_GRAY"COLOR_GRAY"
   echo -e $COLOR_LIGHT_GRAY"COLOR_LIGHT_GRAY"
   echo -e $COLOR_NC
+}
+
+function randompass () {
+  password=`cat /dev/urandom | env LC_CTYPE=C tr -cd 'a-z0-9' | head -c $1`
+  echo $password
+}
+
+function make_gifs () {
+  for file in *.jpg ; do mv $file `echo $file | sed 's/\(.*\.\)jpg/\1gif/'` ; done
+}
+
+function move_gifs () {
+  for fname in *.gif
+  do
+    password=`cat /dev/urandom | env LC_CTYPE=C tr -cd 'a-z0-9' | head -c 5`
+    mv "$fname" $password.gif
+  done
+}
+
+function lipsum () {
+  if [ -z "$1" ]
+  then
+    curl --silent "http://loripsum.net/api/10/medium/" | pbcopy
+    echo "Copied 10 paragraphs of dummy text"
+  else
+    curl --silent "http://loripsum.net/api/$1/medium/" | pbcopy
+    echo "Copied $1 paragraphs of dummy text"
+  fi
 }
