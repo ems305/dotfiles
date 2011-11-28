@@ -1,6 +1,6 @@
 [ui]
 username = Taylor Smith <taylor.smith@imulus.com>
-ignore = ~/.dotfiles/hg/hgignore
+ignore = ~/.hgignore
 verbose = false
 
 [extensions]
@@ -11,9 +11,10 @@ big-push = ~/.dotfiles/hg/extensions/kiln_extensions/big-push.py
 kiln = ~/.dotfiles/hg/extensions/kiln_extensions/kiln.py
 caseguard = ~/.dotfiles/hg/extensions/kiln_extensions/caseguard.py
 kbfiles = ~/.dotfiles/hg/extensions/kiln_extensions/bfiles/kbfiles
-prompt = ~/.dotfiles/hg/extensions/hg-prompt.py
+
 hgext.graphlog =
 progress =
+purge =
 color =
 
 [auth]

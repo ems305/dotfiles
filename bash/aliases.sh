@@ -29,6 +29,7 @@ alias grep='grep --color'
 alias cwd='pwd | pbcopy'
 
 
+
 # Functions
 # ===========================================================================
 
@@ -69,24 +70,22 @@ flush () {
 }
 
 show_colors () {
-  echo -e $COLOR_NC"COLOR_NC"
-  echo -e $COLOR_WHITE"COLOR_WHITE"
-  echo -e $COLOR_BLACK"COLOR_BLACK"
-  echo -e $COLOR_BLUE"COLOR_BLUE"
-  echo -e $COLOR_LIGHT_BLUE"COLOR_LIGHT_BLUE"
-  echo -e $COLOR_GREEN"COLOR_GREEN"
-  echo -e $COLOR_LIGHT_GREEN"COLOR_LIGHT_GREEN"
-  echo -e $COLOR_CYAN"COLOR_CYAN"
-  echo -e $COLOR_LIGHT_CYAN"COLOR_LIGHT_CYAN"
-  echo -e $COLOR_RED"COLOR_RED"
-  echo -e $COLOR_LIGHT_RED"COLOR_LIGHT_RED"
-  echo -e $COLOR_PURPLE"COLOR_PURPLE"
-  echo -e $COLOR_LIGHT_PURPLE"COLOR_LIGHT_PURPLE"
-  echo -e $COLOR_YELLOW"COLOR_YELLOW"
-  echo -e $COLOR_LIGHT_YELLOW"COLOR_LIGHT_YELLOW"
-  echo -e $COLOR_GRAY"COLOR_GRAY"
-  echo -e $COLOR_LIGHT_GRAY"COLOR_LIGHT_GRAY"
-  echo -e $COLOR_NC
+	T='gYw'   # The test text
+
+	echo -e "\n                 40m     41m     42m     43m\
+	     44m     45m     46m     47m";
+
+	for FGs in '    m' '   1m' '  30m' '1;30m' '  31m' '1;31m' '  32m' \
+	           '1;32m' '  33m' '1;33m' '  34m' '1;34m' '  35m' '1;35m' \
+	           '  36m' '1;36m' '  37m' '1;37m';
+	  do FG=${FGs// /}
+	  echo -en " $FGs \033[$FG  $T  "
+	  for BG in 40m 41m 42m 43m 44m 45m 46m 47m;
+	    do echo -en "$EINS \033[$FG\033[$BG  $T  \033[0m";
+	  done
+	  echo;
+	done
+	echo
 }
 
 function randompass () {
@@ -116,3 +115,15 @@ function lipsum () {
     echo "Copied $1 paragraphs of dummy text"
   fi
 }
+
+
+
+alias glog="git log --graph --pretty=format:'%Cred%h%Creset %an: %s - %Creset %C(yellow)%d%Creset %Cgreen(%cr)%Creset' --abbrev-commit --date=relative"
+alias gp='git push origin HEAD'
+alias gd='git diff'
+alias gc='git commit'
+alias gca='git commit -a'
+alias gco='git checkout'
+alias gb='git branch'
+alias gs='git status -sb'
+alias grm="git status | grep deleted | awk '{print \$3}' | xargs git rm"

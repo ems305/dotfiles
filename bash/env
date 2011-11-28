@@ -1,6 +1,0 @@
-# Environment Variables
-# ===========================================================================
-
-export EDITOR="mate -w"
-export PATH="/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:$PATH"
-export CLICOLOR=1

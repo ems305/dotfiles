@@ -1,18 +1,22 @@
-# use glob syntax
 syntax: glob
+
+.DS_Store
+._*
+.Spotlight-V100
+.Trashes
+Thumbs.db 
+Desktop.ini
 
 # Umbraco files
 wwwroot/App_Data/TEMP
 wwwroot/App_Data/umbraco.config
 wwwroot/media
-
-# Regular Files
 wwwroot/web.config
-.DS_Store
 
-#other version control directories
+# Other version control directories
 .svn
 .git
 .gitignore
 
+# Caches
 .sass-cache
