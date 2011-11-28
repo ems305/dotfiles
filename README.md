@@ -7,10 +7,7 @@ Installation
 ------------
 
     git clone git://github.com/taylorsmith/dotfiles.git ~/.dotfiles
-    ln -s ~/.dotfiles/bash_profile ~/.bash_profile
-    ln -s ~/.dotfiles/bashrc ~/.bashrc
-    ln -s ~/.dotfiles/gitconfig ~/.gitconfig
-    ln -s ~/.dotfiles/hgrc ~/.hgrc
+    rake install
 
 A note on SSH
 -------------
