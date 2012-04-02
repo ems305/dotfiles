@@ -1,9 +1,12 @@
 # Aliases
 # ===========================================================================
 
+# Let's use Vim!
+alias m='mate'
+alias mate='mvim'
+
 # Changing Directories
 alias ..='cd ..'
-alias ...='cd ../..'
 alias cdd='cd -'
 
 # Nice file listings
@@ -29,7 +32,9 @@ alias grep='grep --color'
 
 alias cwd='pwd | pbcopy'
 
+alias grundle='bundle'
 
+alias gitfix='rm -f .git/index && git reset'
 
 # Functions
 # ===========================================================================
@@ -141,3 +146,5 @@ alias grm="git status | grep deleted | awk '{print \$3}' | xargs git rm"
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
 alias iplocal="ipconfig getifaddr en1"
 alias ips="ifconfig -a | perl -nle'/(\d+\.\d+\.\d+\.\d+)/ && print $1'"
+
+alias repos="ssh git@gitarchive info"

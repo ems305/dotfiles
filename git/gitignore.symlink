@@ -4,3 +4,5 @@
 .Trashes
 Thumbs.db 
 Desktop.ini
+*.orig
+.sass-cache/

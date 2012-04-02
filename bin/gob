@@ -1,0 +1,9 @@
+echo "Gob's Program: Y/N?"
+read input
+
+if [ $input == 'Y' ]; then
+  while true
+  do
+    printf "PENUS "
+  done
+fi
