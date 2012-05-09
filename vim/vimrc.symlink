@@ -1,4 +1,8 @@
+set nocompatible
+set hidden
 syntax on
+:set background=dark
+:set t_Co=256
 color ir_black
 
 set showtabline=2
@@ -13,11 +17,18 @@ set expandtab
 set autoindent " Copy indent from last line when starting new line.
 set cursorline " Highlight current line
 set vb
-set ignorecase
-set smartcase
+set ignorecase smartcase
 set infercase
-set wildmode=list:longest
+set wildmode=list,longest
+set wildmenu
+set cmdheight=2
+set numberwidth=5
 
-"set list
-"set listchars=tab:▸\ ,eol:¬
+set list
+set listchars=tab:▸\ ,eol:¬
+
+map <Left> :echo "NOPE!"<cr>
+map <Right> :echo "NOPE!"<cr>
+map <Up> :echo "NOPE!"<cr>
+map <Down> :echo "NOPE!"<cr>
 
