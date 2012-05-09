@@ -8,9 +8,9 @@ alias cdd='cd -'                                              # Go to previous d
 alias db='cd ~/Dropbox'                                       # Dropbox shortcut
 alias dev='cd ~/Dropbox/dev'                                  # Dev shortcut
 alias cwd='pwd | pbcopy'                                      # Copy working directory path
-alias ip="dig +short myip.opendns.com @resolver1.opendns.com" # Get external IP address
-alias iplocal="ipconfig getifaddr en1"                        # Internal IP address
-alias ips="ip && iplocal"                                     # Output external and internal IP addresses
+alias ip='dig +short myip.opendns.com @resolver1.opendns.com' # Get external IP address
+alias iplocal='ipconfig getifaddr en1'                        # Internal IP address
+alias ips='ip && iplocal'                                     # Output external and internal IP addresses
 
 
 # Overrides
@@ -55,5 +55,5 @@ alias gco='git checkout'                                      # Checkout shortcu
 alias gb='git branch'                                         # Branch shortcut
 alias gs='git status -sb'                                     # Simple git status view
 alias gitfix='rm -f .git/index && git reset'                  # Fixes corrupted git index
-alias repos="ssh git@gitarchive info"                         # Display all gitarchive repos
-alias killsvn="find . -type d -name .svn | xargs rm -rf"      # Remove all .svn folders
+alias repos='ssh git@gitarchive info'                         # Display all gitarchive repos
+alias killsvn='find . -type d -name .svn | xargs rm -rf'      # Remove all .svn folders
