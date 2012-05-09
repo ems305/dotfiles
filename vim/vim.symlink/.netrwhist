@@ -1,6 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =4
-let g:netrw_dirhist_1='/Volumes/Work/confio/assets/stylesheets'
-let g:netrw_dirhist_2='/Volumes/Work/confio/assets/stylesheets/vendor'
-let g:netrw_dirhist_3='/Volumes/Work/OpenSilicon/src/OpenSilicon.Umbraco/css'
-let g:netrw_dirhist_4='/Users/taylor/.dotfiles/vim/vim.symlink'

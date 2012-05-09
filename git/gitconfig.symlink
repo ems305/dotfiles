@@ -1,6 +1,6 @@
 [user]
-	name = Taylor Smith
-	email = mail@taylorsmith.net
+  name = Taylor Smith
+  email = mail@taylorsmith.net
 
 [color]
   branch = auto
@@ -22,9 +22,3 @@
   added = green
   changed = magenta
   untracked = blue
-
-[alias]
-  addremove = add -A
-[core]
-	excludesfile = /Users/taylor/.gitignore
-	quotepath = false

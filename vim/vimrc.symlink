@@ -1,12 +1,10 @@
-call pathogen#infect()
-filetype plugin indent on
-
-color Tomorrow-Night-Bright
 syntax on
+color ir_black
 
+set showtabline=2
 set number
 set ruler
-
+set showmatch
 set nowrap
 set tabstop=2
 set shiftwidth=2
@@ -15,6 +13,11 @@ set expandtab
 set autoindent " Copy indent from last line when starting new line.
 set cursorline " Highlight current line
 set vb
-set list
-set listchars=tab:▸\ ,eol:¬
+set ignorecase
+set smartcase
+set infercase
+set wildmode=list:longest
+
+"set list
+"set listchars=tab:▸\ ,eol:¬
 
