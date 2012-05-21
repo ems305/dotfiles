@@ -1,0 +1,5 @@
+# Makes a directory and browses to it
+
+mcd () {
+  mkdir "$@" && cd "$@"
+}

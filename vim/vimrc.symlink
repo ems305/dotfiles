@@ -24,11 +24,10 @@ set wildmenu
 set cmdheight=2
 set numberwidth=5
 
-set list
-set listchars=tab:▸\ ,eol:¬
+"set list
+"set listchars=tab:▸\ ,eol:¬
 
 map <Left> :echo "NOPE!"<cr>
 map <Right> :echo "NOPE!"<cr>
 map <Up> :echo "NOPE!"<cr>
 map <Down> :echo "NOPE!"<cr>
-

@@ -1,0 +1,13 @@
+# Mounts a network drive
+#
+# protocol - The protocol used for network share, e.g. smb
+# server - The URL of the server
+# volume - The name of the volume to be mounted
+#
+mnt () {
+  if [ ! -d "/Volumes/$3/" ]; then
+    echo "Mounting ..."
+    osascript -e "try" -e "mount volume \"$1://$2/$3\"" -e "end try"
+  fi
+  cd "/Volumes/$3/"
+}

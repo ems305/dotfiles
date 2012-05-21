@@ -57,3 +57,11 @@ alias gs='git status -sb'                                     # Simple git statu
 alias gitfix='rm -f .git/index && git reset'                  # Fixes corrupted git index
 alias repos='ssh git@gitarchive info'                         # Display all gitarchive repos
 alias killsvn='find . -type d -name .svn | xargs rm -rf'      # Remove all .svn folders
+
+
+# Network Drives
+# =============================================================================
+
+alias dev='mnt smb taylor.smith@ICODEV2 Developer-Environments'
+alias web='mnt smb taylor.smith@ICODEV2 Websites'
+alias vm='mnt smb taylor-pc Work'

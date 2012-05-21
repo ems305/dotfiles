@@ -1,0 +1,10 @@
+function lorem () {
+  if [ -z "$1" ]
+  then
+    curl --silent "http://loripsum.net/api/10/medium/" | pbcopy
+    echo "Copied 10 paragraphs of dummy text"
+  else
+    curl --silent "http://loripsum.net/api/$1/medium/" | pbcopy
+    echo "Copied $1 paragraphs of dummy text"
+  fi
+}

@@ -22,3 +22,5 @@
   added = green
   changed = magenta
   untracked = blue
+[core]
+	quotepath = false

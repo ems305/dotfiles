@@ -12,3 +12,6 @@ source $ZSH/oh-my-zsh.sh
 
 source ~/.dotfiles/shell/env.sh
 source ~/.dotfiles/shell/aliases.sh
+
+fpath=(~/.dotfiles/shell/functions $fpath)
+autoload -U ~/.dotfiles/shell/functions/*(:t)
