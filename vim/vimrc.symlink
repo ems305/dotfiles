@@ -3,7 +3,7 @@ set hidden
 syntax on
 :set background=dark
 :set t_Co=256
-color ir_black
+color tomorrow-night
 
 set showtabline=2
 set number
@@ -19,8 +19,8 @@ set cursorline " Highlight current line
 set vb
 set ignorecase smartcase
 set infercase
-set wildmode=list,longest
-set wildmenu
+"set wildmode=list,longest
+"set wildmenu
 set cmdheight=2
 set numberwidth=5
 
@@ -31,3 +31,9 @@ map <Left> :echo "NOPE!"<cr>
 map <Right> :echo "NOPE!"<cr>
 map <Up> :echo "NOPE!"<cr>
 map <Down> :echo "NOPE!"<cr>
+
+set rnu
+au InsertEnter * :set nu
+au InsertLeave * :set rnu
+au FocusLost * :set nu
+au FocusGained * :set rnu

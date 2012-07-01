@@ -55,7 +55,6 @@ alias gco='git checkout'                                      # Checkout shortcu
 alias gb='git branch'                                         # Branch shortcut
 alias gs='git status -sb'                                     # Simple git status view
 alias gitfix='rm -f .git/index && git reset'                  # Fixes corrupted git index
-alias repos='ssh git@gitarchive info'                         # Display all gitarchive repos
 alias killsvn='find . -type d -name .svn | xargs rm -rf'      # Remove all .svn folders
 
 
