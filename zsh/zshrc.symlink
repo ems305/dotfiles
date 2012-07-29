@@ -1,19 +1,5 @@
-# Path to your oh-my-zsh configuration.
-ZSH=$HOME/.oh-my-zsh
-
-# Set name of the theme to load.
-ZSH_THEME="lightningdb"
-
-# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-# Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git git-flow heroku)
-
-source $ZSH/oh-my-zsh.sh
-
 source ~/.dotfiles/shell/env.sh
 source ~/.dotfiles/shell/aliases.sh
 
 fpath=(~/.dotfiles/shell/functions $fpath)
 autoload -U ~/.dotfiles/shell/functions/*(:t)
-
-DISABLE_AUTO_TITLE=true
