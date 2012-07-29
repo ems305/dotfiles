@@ -63,4 +63,4 @@ alias killsvn='find . -type d -name .svn | xargs rm -rf'      # Remove all .svn 
 
 alias dev='mnt smb taylor.smith@ICODEV2 Developer-Environments'
 alias web='mnt smb taylor.smith@ICODEV2 Websites'
-alias vm='mnt smb taylor-pc Work'
+alias vm="mnt smb taylor-pc Work && PROMPT='%{$fg[magenta]%}%c$(git_prompt) %{$reset_color%}$ '"

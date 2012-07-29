@@ -15,6 +15,6 @@ export ENVIRONMENT="development"
 
 export LOLCOMMITS_DEVICE="Display iSight"
 
-source ~/.dotfiles-private/shell/env.sh
+source ~/.secrets/shell/env.sh
 
 [[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator
