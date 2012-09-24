@@ -7,8 +7,9 @@ let mapleader=","
 
 
 syntax enable
-set background=dark
 colorscheme tomorrow-night-eighties
+
+set guifont=Inconsolata-g:h11
 
 set showtabline=2
 set number
@@ -89,14 +90,15 @@ inoremap <s-tab> <c-n>
 map <S-Enter> O<Esc>
 map <CR> o<Esc>
 
-fun! <SID>StripTrailingWhitespaces()
+function! StripTrailingWhitespaces()
   let l = line(".")
   let c = col(".")
   %s/\s\+$//e
   call cursor(l, c)
-endfun
+endfunction
 
-autocmd FileType c,cpp,java,php,ruby,python autocmd BufWritePre <buffer> :call <SID>StripTrailingWhitespaces()
+map <leader>w :call StripTrailingWhitespaces()<cr>
+
 
 " Wrap visual selection in an HTML tag.
 vmap <Leader>w <Esc>:call VisualHTMLTagWrap()<CR>
