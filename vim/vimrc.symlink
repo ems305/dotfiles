@@ -1,19 +1,27 @@
+" Boot up pathogen
 call pathogen#infect()
 call pathogen#helptags()
-set nocompatible
-set hidden
-syntax on
+
+" Map my leader key
 let mapleader=","
 
-
-syntax enable
+" Pick a theme
+syntax on
 colorscheme tomorrow-night-eighties
 
-set guifont=Inconsolata-g:h11
-
+" Set all the things
+set nocompatible
+set hidden
+set colorcolumn=80
+set guifont=Menlo:h11
+set notimeout
+set ttimeout
+set timeoutlen=50
 set showtabline=2
 set number
+set numberwidth=5
 set ruler
+set hlsearch
 set showmatch
 set nowrap
 set tabstop=2
@@ -25,57 +33,59 @@ set cursorline " Highlight current line
 set vb
 set ignorecase smartcase
 set infercase
-"set wildmode=list,longest
-"set wildmenu
 set cmdheight=2
-set numberwidth=5
 set clipboard=unnamed
-
 set winwidth=150
-autocmd BufRead *.master set syntax=html
-
 set list
 set listchars=tab:▸\ ,eol:¬
+set guioptions-=T
+set guioptions-=r
+set go-=L
+set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
+set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
+set rnu
 
+" Relative line numbers in normal mode
+autocmd InsertEnter * :set nu
+autocmd InsertLeave * :set rnu
+autocmd FocusLost * :set nu
+autocmd FocusGained * :set rnu
+
+" Set syntax for weird files
+autocmd BufNewFile,BufRead *.master set filetype=html
+autocmd BufNewFile,BufRead *.cshtml set filetype=html
+
+" Fancy powerline
+let g:Powerline_symbols = 'fancy'
+
+" Disable arrow keys
 map <Left> :echo "NOPE!"<cr>
 map <Right> :echo "NOPE!"<cr>
 map <Up> :echo "NOPE!"<cr>
 map <Down> :echo "NOPE!"<cr>
+
+" Strip trailing whitespace
+map <leader>w :call StripTrailingWhitespaces()<cr>
+
+" Strip trailing whitespace before save
+autocmd BufWritePre * call StripTrailingWhitespaces()
 
 " Move around splits with <c-hjkl>
 nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k
 nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
+
+" Switch between buffers
 nnoremap <leader><leader> <c-^>
 
-"set rnu
-"au InsertEnter * :set nu
-"au InsertLeave * :set rnu
-"au FocusLost * :set nu
-"au FocusGained * :set rnu
-
-set guioptions-=T
-set guioptions-=r
-set go-=L
-
+" Hit return to remove search highlighting
 function! MapCR()
   nnoremap <cr> :nohlsearch<cr>
 endfunction
 call MapCR()
 
-map <leader>gm :CommandTFlush<cr>\|:CommandT masterpages<cr>
-map <leader>gu :CommandTFlush<cr>\|:CommandT usercontrols<cr>
-map <leader>gx :CommandTFlush<cr>\|:CommandT xslt<cr>
-
-set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
-set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
-
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" MULTIPURPOSE TAB KEY
-" Indent if we're at the beginning of a line. Else, do completion.
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Multipurpose tab key
 function! InsertTabWrapper()
   let col = col('.') - 1
   if !col || getline('.')[col - 1] !~ '\k'
@@ -87,33 +97,18 @@ endfunction
 inoremap <tab> <c-r>=InsertTabWrapper()<cr>
 inoremap <s-tab> <c-n>
 
-map <S-Enter> O<Esc>
-map <CR> o<Esc>
+" Highlight EOL whitespace, http://vim.wikia.com/wiki/Highlight_unwanted_spaces
+highlight ExtraWhitespace ctermbg=darkred guibg=#ff0000
+autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
+autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
+autocmd InsertLeave * match ExtraWhitespace /\s\+$/
+autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
 
+" Strip trailing whitespace
 function! StripTrailingWhitespaces()
   let l = line(".")
   let c = col(".")
   %s/\s\+$//e
   call cursor(l, c)
-endfunction
-
-map <leader>w :call StripTrailingWhitespaces()<cr>
-
-
-" Wrap visual selection in an HTML tag.
-vmap <Leader>w <Esc>:call VisualHTMLTagWrap()<CR>
-function! VisualHTMLTagWrap()
-  let tag = input("Tag to wrap block: ")
-  if len(tag) > 0
-    normal `>
-    if &selection == 'exclusive'
-      exe "normal i</".tag.">"
-    else
-      exe "normal a</".tag.">"
-    endif
-    normal `<
-    exe "normal i<".tag.">"
-    normal `<
-  endif
 endfunction
 
