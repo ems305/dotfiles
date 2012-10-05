@@ -24,4 +24,4 @@
   untracked = blue
 [core]
   quotepath = false
-	autocrlf = input
+  autocrlf = input
