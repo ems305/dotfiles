@@ -13,9 +13,6 @@
 [submodule "vim/vim.symlink/bundle/ctrlp.vim"]
 	path = vim/vim.symlink/bundle/ctrlp.vim
 	url = git://github.com/kien/ctrlp.vim.git
-[submodule "/Users/taylor/.dotfiles/vim/vim.symlink/bundle/vim-powerline"]
-	path = /Users/taylor/.dotfiles/vim/vim.symlink/bundle/vim-powerline
-	url = git://github.com/Lokaltog/vim-powerline.git
 [submodule "vim/vim.symlink/bundle/syntastic"]
 	path = vim/vim.symlink/bundle/syntastic
 	url = git://github.com/scrooloose/syntastic.git
