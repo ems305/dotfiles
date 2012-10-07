@@ -22,3 +22,6 @@
 [submodule "vim/vim.symlink/bundle/vim-powerline"]
 	path = vim/vim.symlink/bundle/vim-powerline
 	url = git://github.com/Lokaltog/vim-powerline.git
+[submodule "vim/vim.symlink/bundle/git-vim"]
+	path = vim/vim.symlink/bundle/git-vim
+	url = git://github.com/motemen/git-vim.git
