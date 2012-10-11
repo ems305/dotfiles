@@ -17,6 +17,8 @@ alias ips='ip && iplocal'                                     # Output external 
 # =============================================================================
 
 alias grep='grep --color'                                     # Default grep to show colors
+alias mate='mvim'
+alias m='mvim'
 
 
 # Apache

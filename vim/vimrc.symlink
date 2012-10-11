@@ -6,12 +6,14 @@ call pathogen#helptags()
 let mapleader=","
 
 " Pick a theme
+color ir_black
 syntax on
-colorscheme ir_black
 
 " Set all the things
 set nocompatible
 set hidden
+set t_Co=256
+set background=dark
 set guifont=Inconsolata-g:h11
 set notimeout
 set ttimeout
