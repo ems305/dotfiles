@@ -36,7 +36,7 @@ set -g mouse-select-window off
 set -g status-fg white     # Text color of full status bar
 set -g status-bg colour232 # Background of full status bar
 
-set-window-option -g window-status-current-format "#[fg=colour232,bg=blue]⮀#[fg=colour16,bg=blue] [#I] #W #[fg=blue,bg=colour232]⮀"
+set-window-option -g window-status-current-format "#[fg=colour16,bg=blue] [#I] #W"
 set-window-option -g window-status-format "#[fg=white,bg=colour232] [#I] #W "
 
 
@@ -55,11 +55,11 @@ setw -g window-status-current-bg cyan   # Background color of active window
 setw -g window-status-current-attr bright
 
 # Left status
-set -g status-left "#[fg=colour16,bg=colour254] #S #[fg=colour254,bg=colour238]⮀#[fg=colour15,bg=colour238] #I #[fg=colour238,bg=colour232]⮀"
+set -g status-left "#[fg=colour16,bg=colour254] #S #[fg=colour15,bg=colour238] #I"
 set -g status-left-length 40
 
 # Right status
-set -g status-right "#[fg=black]⮃ %R #[fg=black]⮃ %d %b #[fg=magenta,bg=colour232]⮂#[fg=colour16,bg=magenta] #(whoami)@#h "
+set -g status-right "#[fg=black]⮃ %R #[fg=black]⮃ %d %b #[fg=colour16,bg=magenta] #(whoami)@#h "
 set -g status-left-length 40
 
 # Messages

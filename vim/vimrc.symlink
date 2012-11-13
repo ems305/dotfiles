@@ -29,6 +29,7 @@ set tabstop=2
 set shiftwidth=2
 set softtabstop=2
 set expandtab
+set smartindent
 set autoindent " Copy indent from last line when starting new line.
 set cursorline " Highlight current line
 set vb
@@ -55,13 +56,14 @@ autocmd FocusLost * :set nu
 autocmd FocusGained * :set rnu
 
 filetype plugin on
+filetype plugin indent on
 
 " Set syntax for weird files
 autocmd BufNewFile,BufRead *.master set filetype=html
 autocmd BufNewFile,BufRead *.cshtml set filetype=html
 
 " Fancy powerline
-let g:Powerline_symbols = 'fancy'
+" let g:Powerline_symbols = 'fancy'
 
 " Disable syntax checking on certain filetypes
 let g:syntastic_mode_map={ 'mode': 'passive',
@@ -79,6 +81,9 @@ map <leader>w :call StripTrailingWhitespaces()<cr>
 
 " Toggle comments quickly
 map <leader>c \\\<cr>
+
+" Hash rocket
+imap <c-l> <space>=><space>
 
 " Strip trailing whitespace before save
 autocmd BufWritePre * call StripTrailingWhitespaces()
