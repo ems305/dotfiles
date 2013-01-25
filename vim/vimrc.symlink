@@ -45,15 +45,8 @@ set guioptions-=r
 set go-=L
 set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
-set rnu
 set colorcolumn=80
 highlight ColorColumn guibg=#202020
-
-" Relative line numbers in normal mode
-autocmd InsertEnter * :set nu
-autocmd InsertLeave * :set rnu
-autocmd FocusLost * :set nu
-autocmd FocusGained * :set rnu
 
 filetype plugin on
 filetype plugin indent on
