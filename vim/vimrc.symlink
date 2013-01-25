@@ -37,7 +37,7 @@ set ignorecase smartcase
 set infercase
 set cmdheight=2
 set clipboard=unnamed
-set winwidth=150
+set winwidth=80
 set list
 set listchars=tab:▸\ ,eol:¬
 set guioptions-=T
