@@ -4,6 +4,8 @@ source ~/.dotfiles/shell/aliases.sh
 fpath=(~/.dotfiles/shell/functions $fpath)
 autoload -U ~/.dotfiles/shell/functions/*(:t)
 
+source ~/.dotfiles/zsh/plugins/bundler.zsh
+
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 unsetopt correct_all
