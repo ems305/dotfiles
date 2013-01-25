@@ -55,9 +55,6 @@ filetype plugin indent on
 autocmd BufNewFile,BufRead *.master set filetype=html
 autocmd BufNewFile,BufRead *.cshtml set filetype=html
 
-" Fancy powerline
-" let g:Powerline_symbols = 'fancy'
-
 " Disable syntax checking on certain filetypes
 let g:syntastic_mode_map={ 'mode': 'passive',
                      \ 'active_filetypes': ['coffee'],
@@ -126,4 +123,3 @@ function! StripTrailingWhitespaces()
   %s/\s\+$//e
   call cursor(l, c)
 endfunction
-
