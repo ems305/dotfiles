@@ -11,7 +11,7 @@ alias cwd='pwd | pbcopy'                                      # Copy working dir
 alias ip='dig +short myip.opendns.com @resolver1.opendns.com' # Get external IP address
 alias iplocal='ipconfig getifaddr en1'                        # Internal IP address
 alias ips='ip && iplocal'                                     # Output external and internal IP addresses
-
+alias json='python -mjson.tool'
 
 # Overrides
 # =============================================================================
