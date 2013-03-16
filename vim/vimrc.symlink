@@ -111,6 +111,8 @@ inoremap <s-tab> <c-n>
 
 " Highlight EOL whitespace, http://vim.wikia.com/wiki/Highlight_unwanted_spaces
 highlight ExtraWhitespace ctermbg=darkred guibg=#ff0000
+highlight clear SignColumn
+
 autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
 autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
 autocmd InsertLeave * match ExtraWhitespace /\s\+$/
