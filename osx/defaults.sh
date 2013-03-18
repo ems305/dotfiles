@@ -34,13 +34,13 @@ defaults write com.apple.screencapture location -string "$HOME/Desktop"
 defaults write com.apple.screencapture type -string "png"
 
 # Disable shadow in screenshots
-defaults write com.apple.screencapture disable-shadow -bool true
+# defaults write com.apple.screencapture disable-shadow -bool true
 
 # Enable subpixel font rendering on non-Apple LCDs
 defaults write NSGlobalDomain AppleFontSmoothing -int 2
 
 # Finder: show hidden files by default
-#defaults write com.apple.Finder AppleShowAllFiles -bool true
+# defaults write com.apple.Finder AppleShowAllFiles -bool true
 
 # Finder: show all filename extensions
 defaults write NSGlobalDomain AppleShowAllExtensions -bool true
@@ -92,4 +92,5 @@ defaults write com.apple.TimeMachine DoNotOfferNewDisksForBackup -bool true
 for app in Finder Dock Mail Safari SystemUIServer; do
   killall "$app" > /dev/null 2>&1
 done
+
 echo "Done. Note that some of these changes require a logout/restart to take effect."
