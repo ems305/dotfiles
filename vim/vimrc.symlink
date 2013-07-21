@@ -61,12 +61,6 @@ let g:syntastic_mode_map={ 'mode': 'passive',
                      \ 'active_filetypes': ['coffee'],
                      \ 'passive_filetypes': [] }
 
-" Disable arrow keys
-map <Left> :echo "NOPE!"<cr>
-map <Right> :echo "NOPE!"<cr>
-map <Up> :echo "NOPE!"<cr>
-map <Down> :echo "NOPE!"<cr>
-
 " Strip trailing whitespace
 map <leader>w :call StripTrailingWhitespaces()<cr>
 
