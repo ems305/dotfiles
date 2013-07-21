@@ -24,6 +24,7 @@
   untracked = blue
 
 [core]
+  excludesfile = ~/.gitignore
   quotepath = false
   autocrlf = input
 
