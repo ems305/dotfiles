@@ -1,10 +1,10 @@
 --sort-files
---type-add=ruby=rake,haml
+--type-add=ruby=rake,haml,rabl
 --type-add=vim=vimrc
 --type-add=js=json
 --type-set=cucumber=feature
 --type-set=css=sass,less
---type-set=html=master,cshtml
+--type-set=html=master,cshtml,htm
 --type-set=MARKDOWN=md,mkd,markdown
 --type-set=RDOC=rdoc
 
