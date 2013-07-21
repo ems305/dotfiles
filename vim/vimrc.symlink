@@ -54,6 +54,7 @@ filetype plugin indent on
 " Set syntax for weird files
 autocmd BufNewFile,BufRead *.master set filetype=html
 autocmd BufNewFile,BufRead *.cshtml set filetype=html
+autocmd BufNewFile,BufRead *.rabl set filetype=ruby
 
 " Disable syntax checking on certain filetypes
 let g:syntastic_mode_map={ 'mode': 'passive',
