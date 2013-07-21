@@ -64,6 +64,12 @@ let g:syntastic_mode_map={ 'mode': 'passive',
 " Strip trailing whitespace
 map <leader>w :call StripTrailingWhitespaces()<cr>
 
+" Flush CommandT cache
+map <leader>f :CommandTFlush<cr>
+
+" Toggle git gutter
+map <leader>g :ToggleGitGutter<cr>
+
 " Toggle comments quickly
 map <leader>c \\\<cr>
 
@@ -120,3 +126,9 @@ function! StripTrailingWhitespaces()
   %s/\s\+$//e
   call cursor(l, c)
 endfunction
+
+cnoremap %% <C-R>=expand('%:h').'/'<cr>
+map <leader>v :!open %%<cr><cr>
+
+" Hard mode
+nnoremap <leader>h <Esc>:call ToggleHardMode()<CR>
