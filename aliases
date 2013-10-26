@@ -1,0 +1,7 @@
+alias la='ls -la'
+alias cdd='cd -'
+alias db='cd ~/Dropbox'
+alias dev='cd ~/Dropbox/dev'
+alias json='python -mjson.tool'
+alias grep='grep --color'
+alias m='mvim'

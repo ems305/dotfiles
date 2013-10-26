@@ -1,4 +1,0 @@
-function pw () {
-  password=`cat /dev/urandom | env LC_CTYPE=C tr -cd 'a-z0-9' | head -c $1`
-  echo $password
-}
