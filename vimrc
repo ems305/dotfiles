@@ -59,6 +59,8 @@ autocmd BufNewFile,BufRead *.rabl set filetype=ruby
 " Strip trailing whitespace
 map <leader>w :call StripTrailingWhitespaces()<cr>
 
+map <leader>t :CommandT<cr>
+
 " Flush CommandT cache
 map <leader>f :CommandTFlush<cr>\|:CommandT<cr>
 map <leader>ga :CommandT assets<cr>
