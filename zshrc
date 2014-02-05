@@ -27,6 +27,8 @@ setopt correct_all
 setopt extended_glob
 setopt interactivecomments
 
+unsetopt correct_all
+
 export PS1='[${SSH_CONNECTION+"%n@%m:"}%~] '
 export HISTSIZE=4096
 export DIRSTACKSIZE=10
