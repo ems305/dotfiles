@@ -46,6 +46,7 @@ set go-=L
 set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 set colorcolumn=80
+set wildignore+=*/node_modules/**,*/bower_components/**
 highlight ColorColumn guibg=#202020
 
 filetype plugin on
@@ -67,6 +68,12 @@ map <leader>ga :CommandT assets<cr>
 map <leader>gs :CommandT assets/stylesheets<cr>
 map <leader>gj :CommandT assets/javascripts<cr>
 map <leader>gv :CommandT Views<cr>
+
+map <leader>gc :CommandT app/controllers<cr>
+map <leader>gm :CommandT app/models<cr>
+map <leader>gv :CommandT app/views<cr>
+map <leader>gr :CommandT spec<cr>
+
 
 " Toggle git gutter
 map <leader>g :ToggleGitGutter<cr>
@@ -132,4 +139,3 @@ endfunction
 
 cnoremap %% <C-R>=expand('%:h').'/'<cr>
 map <leader>v :!open %%<cr><cr>
-
