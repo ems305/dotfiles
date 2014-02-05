@@ -74,6 +74,9 @@ map <leader>gm :CommandT app/models<cr>
 map <leader>gv :CommandT app/views<cr>
 map <leader>gr :CommandT spec<cr>
 
+map <Leader>r :call RunCurrentSpecFile()<CR>
+map <Leader>s :call RunAllSpecs()<CR>
+let g:rspec_command = "compiler rspec | set makeprg=zeus | Make rspec {spec}"
 
 " Toggle git gutter
 map <leader>g :ToggleGitGutter<cr>
