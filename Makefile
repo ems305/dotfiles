@@ -8,6 +8,7 @@ clean:
 	rm -rf ~/.env
 	rm -rf ~/.gemrc
 	rm -rf ~/.gitconfig
+	rm -rf ~/.githelpers
 	rm -rf ~/.gitignore
 	rm -rf ~/.guardrc
 	rm -rf ~/.hushlogin
@@ -30,6 +31,7 @@ build:
 	ln -s $(CURDIR)/env ~/.env
 	ln -s $(CURDIR)/gemrc ~/.gemrc
 	ln -s $(CURDIR)/gitconfig ~/.gitconfig
+	ln -s $(CURDIR)/githelpers ~/.githelpers
 	ln -s $(CURDIR)/gitignore ~/.gitignore
 	ln -s $(CURDIR)/guardrc ~/.guardrc
 	ln -s $(CURDIR)/hushlogin ~/.hushlogin
