@@ -123,6 +123,24 @@ endfunction
 inoremap <tab> <c-r>=InsertTabWrapper()<cr>
 inoremap <s-tab> <c-n>
 
+function! WildignoreFromGitignore()
+  let gitignore = '.gitignore'
+  if filereadable(gitignore)
+    let igstring = ''
+    for oline in readfile(gitignore)
+      let line = substitute(oline, '\s|\n|\r', '', "g")
+      if line =~ '^#' | con | endif
+      if line == '' | con  | endif
+      if line =~ '^!' | con  | endif
+      if line =~ '/$' | let igstring .= "," . line . "*" | con | endif
+      let igstring .= "," . line
+    endfor
+    let execstring = "set wildignore=".substitute(igstring,'^,','',"g")
+    execute execstring
+  endif
+endfunction
+call WildignoreFromGitignore()
+
 " Highlight EOL whitespace, http://vim.wikia.com/wiki/Highlight_unwanted_spaces
 highlight ExtraWhitespace ctermbg=darkred guibg=#ff0000
 highlight clear SignColumn
