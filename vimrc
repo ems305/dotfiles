@@ -14,12 +14,13 @@ set nocompatible
 set hidden
 set t_Co=256
 set background=dark
-set guifont=Inconsolata-g:h11
+set guifont=Inconsolata-g:h12
 set notimeout
 set ttimeout
 set timeoutlen=50
 set showtabline=2
 set number
+set relativenumber
 set numberwidth=5
 set ruler
 set hlsearch
