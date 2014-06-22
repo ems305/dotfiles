@@ -5,6 +5,7 @@ clean:
 	rm -rf ~/.aliases
 	rm -rf ~/.bash_profile
 	rm -rf ~/.bashrc
+	rm -rf ~/.editorconfig
 	rm -rf ~/.env
 	rm -rf ~/.gemrc
 	rm -rf ~/.gitconfig
@@ -28,6 +29,7 @@ build:
 	ln -s $(CURDIR)/aliases ~/.aliases
 	ln -s $(CURDIR)/bash_profile ~/.bash_profile
 	ln -s $(CURDIR)/bashrc ~/.bashrc
+	ln -s $(CURDIR)/editorconfig ~/.editorconfig
 	ln -s $(CURDIR)/env ~/.env
 	ln -s $(CURDIR)/gemrc ~/.gemrc
 	ln -s $(CURDIR)/gitconfig ~/.gitconfig
@@ -45,4 +47,3 @@ build:
 	ln -s $(CURDIR)/zsh ~/.zsh
 	ln -s $(CURDIR)/zshenv ~/.zshenv
 	ln -s $(CURDIR)/zshrc ~/.zshrc
-
