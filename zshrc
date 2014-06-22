@@ -1,4 +1,5 @@
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+if which direnv > /dev/null; then eval "$(direnv hook zsh)"; fi
 
 fpath=(~/.zsh/completion $fpath)
 
