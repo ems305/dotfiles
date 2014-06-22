@@ -9,3 +9,9 @@ Thumbs.db
 ehthumbs.db
 Desktop.ini
 $RECYCLE.BIN/
+
+.env
+.envrc
+.rvmrc
+.sass-cache
+*.orig
