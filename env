@@ -1,9 +1,27 @@
-export EDITOR="vim"
-export PATH="/usr/local/sbin:$PATH"
-export PATH="/usr/local/bin:$PATH"
-export PATH="/usr/local/share/npm/bin:$PATH"
-export PATH=~/.wp-cli/bin:$PATH
-export NODE_PATH="/usr/local/lib/node_modules"
-export WP_CLI_PHP=/Applications/MAMP/bin/php/php5.4.10/bin/php
+## Editor ##
+export EDITOR="subl"
 
-[[ -s "${HOME}/.secrets" ]] && source "${HOME}/.secrets"
+## Gradle ##
+export GRADLE_HOME="/usr/local/gradle-1.12/bin"
+
+## Maven ##
+export M2_HOME="/usr/local/apache-maven-3.2.2"
+
+## Ant ##
+export ANT_HOME="/usr/local/ant/apache-ant-1.9.4/bin"
+
+## Java ##
+export JAVA_HOME="/Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Home"
+
+## Path ##
+export PATH="/usr/bin"
+export PATH="/bin:$PATH"
+export PATH="/usr/sbin:$PATH"
+export PATH="/sbin:$PATH"
+export PATH="/usr/local/gradle-1.12/bin:$PATH"
+export PATH="/usr/local/apache-maven-3.2.2/bin:$PATH"
+export PATH="/usr/local/apache-ant-1.9.4/bin:$PATH"
+export PATH="/Applications/Android Studio.app/sdk/platform-tools:$PATH"
+export PATH="/Applications/Android Studio.app/sdk/tools:$PATH"
+export PATH="/Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Home/bin:$PATH"
+export PATH="/usr/local/bin:$PATH"

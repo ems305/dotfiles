@@ -1,6 +1,6 @@
 [user]
-  name = Taylor Smith
-  email = mail@taylorsmith.net
+  name = Erik Smith
+  email = ems305@gmail.com
 
 [color]
   branch = auto
@@ -27,29 +27,3 @@
   excludesfile = ~/.gitignore
   quotepath = false
   autocrlf = input
-
-[alias]
-  b  = branch
-  st = status
-  ci = commit
-  ca = commit --amend
-  co = checkout
-  di = diff
-  dc = diff --cached
-  aa = add --all
-  ff = merge --ff-only
-  flarhgunnstow = reflog
-  l = "!. ~/.githelpers && pretty_git_log"
-[difftool "Kaleidoscope"]
-  cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
-[diff]
-  tool = Kaleidoscope
-[difftool]
-  prompt = false
-[mergetool "Kaleidoscope"]
-  cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
-  trustExitCode = true
-[mergetool]
-  prompt = false
-[merge]
-  tool = Kaleidoscope

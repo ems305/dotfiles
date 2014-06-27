@@ -1,7 +1,39 @@
-alias la='ls -la'
-alias cdd='cd -'
-alias db='cd ~/Dropbox'
-alias dev='cd ~/Dropbox/dev'
-alias json='python -mjson.tool'
-alias grep='grep --color'
-alias m='mvim'
+# Navigation Aliases
+alias back='cd -'
+
+# Git Aliases #
+alias gutcheck="git status"
+alias boom="git reset head --hard"
+alias pretty="!. ~/.githelpers && pretty_git_log"
+
+# File Aliases
+alias zshconfig="open ~/.zshrc"
+alias ohmyzsh="open ~/.oh-my-zsh"
+alias aliases="open ~/.aliases"
+alias config="cd /Users/eriksmith/;open .zshrc"
+
+# Folder Aliases
+alias dot="cd /Users/eriksmith/Development/dotfiles"
+alias usr="cd /Users/eriksmith/"
+alias usrlocal="cd /usr/local/"
+alias dev="cd /Users/eriksmith/Development/"
+alias ios="cd /Users/eriksmith/Development/iOS/"
+alias multi="cd /Users/eriksmith/Development/MultiPlatform/"
+alias downloads="cd /Users/eriksmith/Downloads/"
+alias desktop="cd /Users/eriksmith/Desktop/"
+alias docs="cd /Users/eriksmith/Documents/"
+alias dropbox="cd /Users/eriksmith/Dropbox/"
+alias trash="cd ~/.Trash"
+
+# Program Aliases
+alias chrome="open /Applications/Google\ Chrome.app"
+alias xcode="open /Applications/xcode.app"
+alias studio="open /Applications/Android\ Studio.app"
+alias adium="open /Applications/Adium.app"
+alias slack="open /Applications/Slack.app"
+alias cord="open /Applications/Cord.app"
+alias vm="open /Applications/VMWare\ Fusion.app"
+
+# Android Aliases
+alias initconnect="adb tcpip 5555"
+alias connect="adb connect 192.168.1.105:5555"	

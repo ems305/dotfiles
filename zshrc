@@ -1,39 +1,31 @@
-if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
-if which direnv > /dev/null; then eval "$(direnv hook zsh)"; fi
-
-fpath=(~/.zsh/completion $fpath)
-
-autoload -U compinit
-compinit -C
-
-for function in ~/.zsh/functions/*; do
-  source $function
-done
-
 set -o emacs
 
-bindkey "^Y" accept-and-hold
-bindkey "^N" insert-last-word
-bindkey -s "^T" "^Asudo ^E"
-
+# Change Dirs without 'cd'
 setopt auto_cd
-setopt prompt_subst
-setopt histignoredups
-setopt autopushd
-setopt pushdminus
-setopt pushdsilent
-setopt pushdtohome
-setopt correct
-setopt correct_all
-setopt extended_glob
-setopt interactivecomments
 
+# Consolidate Dupes
+setopt histignoredups
+
+# Disable AutoCorrect
 unsetopt correct_all
 
-export PS1='[${SSH_CONNECTION+"%n@%m:"}%~] '
-export HISTSIZE=4096
-export DIRSTACKSIZE=10
+# Uncomment to change how many often would you like to wait before auto-updates occur? (in days)
+export UPDATE_ZSH_DAYS=1
 
-zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
+# Uncomment following line if you want to disable colors in ls
+# DISABLE_LS_COLORS="true"
+
+# Uncomment following line if you want to disable autosetting terminal title.
+# DISABLE_AUTO_TITLE="true"
+
+# Uncomment following line if you want red dots to be displayed while waiting for completion
+COMPLETION_WAITING_DOTS="true"
+
+plugins=(git)
+
+ZSH=$HOME/.oh-my-zsh
+ZSH_THEME="robbyrussell"
+
+source $ZSH/oh-my-zsh.sh
 
 [[ -s "${HOME}/.aliases" ]] && source "${HOME}/.aliases"
