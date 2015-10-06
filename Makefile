@@ -1,4 +1,4 @@
-all: clean build
+all: clean build create
 
 clean:
 	rm -rf ~/.aliases
@@ -31,3 +31,9 @@ build:
 	ln -s $(CURDIR)/zsh ~/.zsh
 	ln -s $(CURDIR)/zshenv ~/.zshenv
 	ln -s $(CURDIR)/zshrc ~/.zshrc
+
+create:
+	mkdir -p ~/Development/Web
+	mkdir -p ~/Development/iOS
+	mkdir -p ~/Development/Android
+	mkdir -p ~/Development/MultiPlatform
