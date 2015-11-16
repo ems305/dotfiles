@@ -1,6 +1,3 @@
-## Editor ##
-export EDITOR="subl"
-
 ## Gradle ##
 export GRADLE_HOME="/usr/local/gradle-1.12/bin"
 

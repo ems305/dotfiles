@@ -27,3 +27,4 @@
   excludesfile = ~/.gitignore
   quotepath = false
   autocrlf = input
+	editor = /Applications/Sublime\\ Text\\ 2.app/Contents/SharedSupport/bin/subl -n -w
