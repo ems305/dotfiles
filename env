@@ -1,24 +1,12 @@
-## Gradle ##
-export GRADLE_HOME="/usr/local/gradle-1.12/bin"
-
-## Maven ##
-export M2_HOME="/usr/local/apache-maven-3.2.2"
-
-## Ant ##
-export ANT_HOME="/usr/local/ant/apache-ant-1.9.4/bin"
-
 ## Java ##
-export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.7.0_79.jdk/Contents/Home"
+export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_92.jdk/Contents/Home"
 
 ## Path ##
 export PATH="/usr/bin"
 export PATH="/bin:$PATH"
 export PATH="/usr/sbin:$PATH"
 export PATH="/sbin:$PATH"
-export PATH="/usr/local/gradle-1.12/bin:$PATH"
-export PATH="/usr/local/apache-maven-3.2.2/bin:$PATH"
-export PATH="/usr/local/apache-ant-1.9.4/bin:$PATH"
-export PATH="/Library/Java/JavaVirtualMachines/jdk1.7.0_79.jdk/Contents/Home"
+export PATH="/Library/Java/JavaVirtualMachines/jdk1.8.0_92.jdk/Contents/Home"
 export PATH="/usr/local/bin:$PATH"
 
 ## Android ##

@@ -28,3 +28,9 @@
   quotepath = false
   autocrlf = input
 	editor = /Applications/Sublime\\ Text\\ 2.app/Contents/SharedSupport/bin/subl -n -w
+[filter "lfs"]
+	required = true
+	clean = git-lfs clean %f
+	smudge = git-lfs smudge %f
+[merge]
+	tool = opendiff
